@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Развлечение по Луману</title>
+<style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #1a237e;
+      margin-bottom: 1rem;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    button {
+      background-color: #3949ab;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    button:hover {
+      background-color: #303f9f;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .block {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .intro-block {
+  flex-direction: row-reverse;
+  align-items: stretch;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .intro-texts {
+      flex: 1;
+      min-width: 250px;
+    }
+    .intro-texts .info-box {
+  background-color: #f4f7fa;
+  border-left: 4px solid #64b5f6;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 5px solid #90caf9;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .intro-texts .info-box h3 {
+      margin-top: 0;
+      color: #1565c0;
+    }
+    .intro-image {
+      flex: 1;
+      max-width: 300px;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+    }
+    .intro-image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .section {
+      background: white;
+      border-left: 5px solid #4caf50;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .section:nth-child(2) { border-left-color: #fbc02d; }
+    .section:nth-child(3) { border-left-color: #e91e63; }
+    .section:nth-child(4) { border-left-color: #00acc1; }
+    .section:nth-child(5) { border-left-color: #8e24aa; }
+
+    .section h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section ul {
+      margin: 0.5rem 0 0 1rem;
+      padding-left: 1rem;
+      display: none;
+    }
+    .section.active ul {
+      display: block;
+    }
+    .tooltip {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.4rem; }
+      .section h2 { font-size: 1rem; }
+      button { font-size: 0.85rem; }
+      .intro-block {
+  flex-direction: column-reverse;
+  align-items: center;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); }
+    }
+  </style>
+</head>
+<body>
+<h1>О Лумане и контексте главы</h1>
+<div class="block intro-block">
+<div class="intro-texts">
+<div class="info-box">
+<h3>Кто такой Никлас Луман (1927–1998)?</h3>
+<p>Немецкий социолог, создатель системной теории. Рассматривал общество как сеть замкнутых коммуникационных систем.</p>
+<ul style="margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.95rem;"><li>Образование: юриспруденция (университет Фрайбурга)</li><li>Доктор социологии (университет Мюнстера, 1966)</li><li>Стажировка у Талкотта Парсонса в Гарварде</li><li>Профессор университета Билефельда</li><li>Директор Центра междисциплинарных исследований</li><li>Преподавал с 1968 по 1993 год</li></ul></div>
+<div class="info-box">
+<h3>О книге «Реальность массмедиа» (Die Realität der Massenmedien, 1996)</h3>
+<p>«Реальность массмедиа» — сборник теоретических очерков, показывающий, как медиа не просто отражают, а конструируют реальность.</p>
+</div>
+<div class="info-box">
+<h3>О главе «Развлечение»</h3>
+<p>Глава исследует развлечение как особую форму коммуникации, отличную от новостей и игр. В центре — фиктивность, неопределённость и идентичность.</p>
+</div>
+</div>
+<div class="intro-image">
+<img alt="Никлас Луман" src="media/luman.jpg"/>
+</div>
+</div>
+<h2 style="text-align:center; color:#1a237e; margin: 2rem 0 1rem;">Интерактивная интеллект-карта: «Развлечение»</h2>
+<div class="block">
+<div class="controls">
+<button onclick="expandAll()">Развернуть всё</button>
+<button onclick="collapseAll()">Свернуть всё</button>
+</div>
+<div class="container">
+<div class="section" onclick="toggleSection(this)">
+<h2>🎭 1. Развлечение как «вторая реальность»</h2>
+<ul><li>Развлечение создаёт воображаемый мир, в который можно «войти» без риска.</li><li>Этот мир не настоящий, но воспринимается всерьёз.</li><li>После его окончания человек возвращается к обычной жизни, как будто ничего не было.</li></ul>
+<div class="tooltip">Безопасный вымышленный мир.</div>
+</div>
+<div class="section" onclick="toggleSection(this)">
+<h2>🧩 2. Отличие от игры и новостей</h2>
+<ul><li>В игре мы участвуем, в новостях получаем факты.</li><li>В развлечении мы просто наблюдаем, не принимая решений.</li><li>Это способ «пережить что-то», не вмешиваясь.</li></ul>
+<div class="tooltip">Наблюдаем, а не участвуем.</div>
+</div>
+<div class="section" onclick="toggleSection(this)">
+<h2>📡 3. Информация и структура сюжета</h2>
+<ul><li>Информация здесь — это не знания, а интерес: что будет дальше?</li><li>Мы втягиваемся в историю благодаря неожиданностям.</li><li>Сюжет ведёт нас от неизвестного к развязке — и этим удерживает внимание.</li></ul>
+<div class="tooltip">Интрига важнее фактов.</div>
+</div>
+<div class="section" onclick="toggleSection(this)">
+<h2>🧠 4. Идентичность и наблюдение</h2>
+<ul><li>Наблюдая за героями, мы невольно сравниваем их с собой.</li><li>Это помогает нам лучше понять свои чувства и поведение.</li><li>Развлечение становится зеркалом, в котором можно видеть себя, но без давления.</li></ul>
+<div class="tooltip">Герои помогают понять себя.</div>
+</div>
+<div class="section" onclick="toggleSection(this)">
+<h2>🌍 5. Массовость и историческая перспектива</h2>
+<ul><li>Раньше развлекались только те, кто имел доступ к театру и книгам.</li><li>Сейчас развлечения доступны всем — через кино, ТВ, интернет.</li><li>Это стало общей культурной привычкой, не требующей образования или усилий.</li></ul>
+<div class="tooltip">Доступно каждому, везде.</div>
+</div>
+</div>
+</div>
+<script>
+    function toggleSection(el) {
+      el.classList.toggle('active');
+    }
+
+    function expandAll() {
+      document.querySelectorAll('.section').forEach(el => el.classList.add('active'));
+    }
+
+    function collapseAll() {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
